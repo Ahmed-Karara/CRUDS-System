@@ -1,0 +1,6 @@
+{
+    "prettier.withNodeModules": true,
+    "prettier.useTabs": true,
+    "prettier.useEditorConfig": true,
+    "prettier.requireConfig": false
+}

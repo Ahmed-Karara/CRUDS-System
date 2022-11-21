@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="cruds.css" />
+	</head>
+	<body>
+		<div class="cruds">
+			<div class="head">
+				<h2>CRUDS</h2>
+				<p>Product management system</p>
+			</div>
+
+			<form class="inputs" onSubmit="createproduct()">
+				<input type="text" id="title" placeholder="Title" required />
+				<div class="price">
+					<input onkeyup=" getTotalPrice()" type="number" id="price" placeholder="price" required />
+					<input onkeyup=" getTotalPrice()" type="number" id="tax" placeholder="tax" required />
+					<input onkeyup=" getTotalPrice()" type="number" id="ads" placeholder="ads" />
+					<input onkeyup=" getTotalPrice()" type="number" id="discount" placeholder="discount" />
+					<small id="total"></small>
+				</div>
+				<input type="tel" id="count" placeholder="count" maxlength="5" />
+				<input type="text" id="category" placeholder="category" required />
+				<button class="btn-create" id="submit" type="submit">Create</button>
+			</form>
+
+			<div class="outputs">
+				<input
+					type="text"
+					id="searching"
+					placeholder="search"
+					onkeyup="searchProducts(this.value)" />
+				<div class="search">
+					<button onclick="searchMoods(this.id)" id="searchTitle">Search By Title</button>
+					<button onclick="searchMoods(this.id)" id="searchCategory">Search by Category</button>
+				</div>
+			</div>
+
+			<div id="deleteall"></div>
+
+			<table>
+				<tr>
+					<th>id</th>
+					<th>title</th>
+					<th>price</th>
+					<th>tax</th>
+					<th>ads</th>
+					<th>discount</th>
+					<th>total</th>
+					<th>category</th>
+					<th>update</th>
+					<th>delete</th>
+				</tr>
+				<tbody id="tbody"></tbody>
+			</table>
+		</div>
+
+		<script src="cruds.js"></script>
+	</body>
+</html>
